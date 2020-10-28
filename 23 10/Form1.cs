@@ -39,6 +39,7 @@ namespace _23_10
             else if (radioButton2.Checked == true)
             {
                 price = Convert.ToDouble(textBox2.Text) / Convert.ToDouble(label6.Text);
+                price = Math.Round(price, 2);
                 label7.Text = price.ToString();
                 label8.Text = "л.";
             }
