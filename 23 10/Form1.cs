@@ -26,7 +26,13 @@ namespace _23_10
             {
                 if (cb.Checked == true)
                 {
-                    price += Convert.ToDouble(cb.Tag) * Convert.ToDouble(textBox3.Text);
+                    foreach (TextBox cbb in groupBox4.Controls.OfType<TextBox>())
+                    {
+                        if (cbb.Enabled == true)
+                        {
+                            price += Convert.ToDouble(cb.Tag) * Convert.ToDouble(cbb.Text);
+                        }
+                    }
                 }
             }
             label10.Text = price.ToString();
